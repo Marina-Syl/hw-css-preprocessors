@@ -1,0 +1,79 @@
+
+@border:2px black solid;
+@heightcub:20%;
+@heighttxt:40%;
+@widthmain:@heighttxt + 40%;
+@fz1:30px;
+.flex{
+    display: flex;
+    align-items: center;
+}
+html,body{
+    height: 100%;
+    margin: 0;  
+}
+body{
+   .flex();
+    justify-content: center;
+}
+   #main{
+    height:@heightcub;
+    width:@widthmain;
+   border: @border;
+  .flex();
+   justify-content: space-evenly;
+   gap: 30px;
+   }
+   #main .cub1{
+    height:@heighttxt;
+    width: @heighttxt;
+    background-color: rgb(255, 51, 0);
+    border: @border;
+   .flex();
+    justify-content: flex-start;
+    color: white;
+   }
+   #main .cub2{
+    height:@heighttxt;
+    width: @heighttxt;
+    background-color: rgb(255, 230, 0);
+    border: @border;
+   .flex();
+    justify-content: flex-end;
+    
+   }
+   @media  (max-width:1200px)and (min-width:700px) {
+   #main {
+      flex-direction: column;
+      gap: 5px;
+      height:@heighttxt;
+    }
+    #main .cub1 {
+        width: @widthmain;
+        font-size:@fz1;
+    }
+    #main .cub2 {
+        width: @widthmain;
+        font-size:@fz1;
+    }
+}
+@media  (max-width:700px)and (min-width:100px) {
+    #main {
+       flex-direction: column;
+       gap: 5px;
+       height:@heighttxt;
+     }
+     #main .cub1 {
+        justify-content: center;
+         width: @widthmain;
+         font-size:@fz1;
+     }
+     #main .cub2 {
+        justify-content: center;
+         width: @widthmain;
+         font-size:@fz1;
+     }
+ }
+ 
+ 
+
